@@ -1,25 +1,25 @@
-<div class="field">
-  <label class="label">タイトル</label>
-  <div class="control">
-    <input id="title" class="input" type="text" placeholder="タイトルを入力(未入力可)">
+<form action="/create" method="post">
+  <div class="field">
+    <label class="label">タイトル</label>
+    <div class="control">
+      <input name="memo_title" class="input" type="text" placeholder="タイトルを入力(未入力可)">
+    </div>
   </div>
-</div>
 
-<div class="field">
-  <label class="label">内容</label>
-  <div class="control">
-    <textarea id="contents" class="textarea" placeholder="内容を入力"></textarea>
+  <div class="field">
+    <label class="label">内容</label>
+    <div class="control">
+      <textarea name="memo_body" class="textarea" placeholder="内容を入力"></textarea>
+    </div>
   </div>
-</div>
 
-<div class="field is-grouped">
-  <div class="control">
-    <form action="/" method="post">
+  <div class="field is-grouped">
+    <div class="control">
       <button class="button is-primary">保存</button>
-    </form>
+    </div>
+    <div class="control">
+      <a class="button " href="/">キャンセル</a>
+    </div>
   </div>
-  <div class="control">
-    <a class="button" href="/">キャンセル</a>
-  </div>
-</div>
+</form>
 

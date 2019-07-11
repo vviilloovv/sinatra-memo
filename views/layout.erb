@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>メモアプリ | <%= @title %></title>
+    <title>メモアプリ | <%= @page_title %></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
   </head>
   <body>
@@ -13,6 +13,11 @@
       </div>
     </nav>
     <%= yield %>
+    <footer>
+      <div class="content has-text-centered">
+        2019 ©︎vviilloovv
+      </div>
+    </footer>
   </body>
 </html>
 
