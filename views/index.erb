@@ -1,2 +1,9 @@
 <a href="/create" class="button is-primary is-outlined">メモ追加</a>
+<div class="content">
+  <ul>
+    <% @memos.each do |memo| %>
+      <li><a href="./view" ><%= memo["title"] %></a></li>
+    <% end %>
+  </ul>
+</div>
 
