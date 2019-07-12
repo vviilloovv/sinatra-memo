@@ -2,7 +2,7 @@ require "sinatra"
 require "sinatra/reloader"
 require "json"
 
-json_file_path = "./public/memos.json"
+json_file_path = "./memos.json"
 
 get "/" do
   @page_title = "Top"
@@ -16,8 +16,15 @@ get "/new" do
 end
 
 post "/new" do
+  if params[:memo_body].empty?
+    redirect "/new"
+  else
+    title = params[:memo_title].nil? ? "No Title" : params[:memo_title]
+    body = params[:memo_body]
+    #add_memo(title, body)
 
-  erb :new
+    redirect "/"
+  end
 end
 
 get "/show" do
