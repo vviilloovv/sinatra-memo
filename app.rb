@@ -2,11 +2,21 @@ require "sinatra"
 require "sinatra/reloader"
 require "json"
 
-json_file_path = "./memos.json"
+
+helpers do
+  def json_file_path
+    "./memos.json"
+  end
+
+  # Load json file
+  def memos
+    open(json_file_path) { |io| JSON.load(io) }["memos"]
+  end
+end
 
 get "/" do
   @page_title = "Top"
-  @memos = open(json_file_path) { |io| JSON.load(io) }["memos"]
+  @memos = memos
   erb :index
 end
 
@@ -29,7 +39,7 @@ end
 
 get "/show" do
   @page_title = "Show memo"
-  @memo = params[:memo]
+  @memo = memos.find { |memo| memo["id"] == params["id"] }
   erb :show
 end
 

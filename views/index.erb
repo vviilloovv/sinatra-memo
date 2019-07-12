@@ -1,11 +1,9 @@
 <a href="/new" class="button is-primary is-outlined">メモ追加</a>
 <div class="content">
-  <form action="/show" method="get">
-    <ul>
-      <% @memos.each do |memo| %>
-        <li><input <%= memo["title"] %></a></li>
-      <% end %>
-    </ul>
-  </form>
+  <ul>
+    <% @memos.each do |memo| %>
+      <li><a href="/show?id=<%= memo["id"] %>"><%= memo["title"] %></a></li>
+    <% end %>
+  </ul>
 </div>
 
