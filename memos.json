@@ -1,7 +1,1 @@
-{
-  "memos": [
-    { "id": "20190621001300", "title": "title1", "body": "test body" },
-    { "id": "20190623121212", "title": "title3", "body": "hogehoge" }
-  ]
-}
-
+{"memos":[{"id":"20190714232852","title":"John Doe's memo","body":"test body"},{"id":"20190714232931","title":"test title","body":"testtest"}]}

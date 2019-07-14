@@ -1,3 +1,4 @@
+<% id = @memo["id"] %>
 <nav class="breadcrumb" aria-label="breadcrumbs">
   <ul>
     <li><a href="/">Top</a></li>
@@ -6,15 +7,16 @@
 </nav>
 <div class="content">
   <h3 class="title is-3"><%= @memo["title"] %></h2>
-  <p><%= @memo["body"] %></p>
+  <p><%= @memo["body"].gsub(/(\r\n|\r|\n)/, "<br>") %></p>
 </div>
 <div class="field is-grouped">
   <div class="control">
-    <a class="button is-success is-outlined" href="/edit?id=<%= @memo["id"] %>">編集</a>
+    <a class="button is-success is-outlined" href="/edit?id=<%= id %>">編集</a>
   </div>
   <div class="control">
     <form action="/edit" method="post">
       <input type="hidden" name="_method" value="delete">
+      <input type="hidden" name="id" value="<%= id %>">
       <button class="button is-danger is-outlined">削除</button>
     </form>
   </div>
