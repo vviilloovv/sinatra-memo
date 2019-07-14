@@ -1,0 +1,31 @@
+<nav class="breadcrumb" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="/">Top</a></li>
+    <li><a href="/show?id=<%= @memo["id"] %>">Show memo</a></li>
+    <li class="is-active"><a href="#" aria-current="page">Edit memo</a></li>
+  </ul>
+</nav>
+<form action="/edit" method="post">
+  <div class="field">
+    <label class="label">タイトル</label>
+    <div class="control">
+      <input name="memo_title" class="input" type="text" value=<%= @memo["title"] %>>
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">内容</label>
+    <div class="control">
+      <textarea name="memo_body" class="textarea"><%= @memo["body"] %></textarea>
+    </div>
+  </div>
+  <div class="field is-grouped">
+    <div class="control">
+      <input type="hidden" name="_method" value="patch">
+      <button class="button is-success is-outlined">修正</button>
+    </div>
+    <div class="control">
+      <a class="button" href="/show?id=<%= @memo["id"] %>">キャンセル</a>
+    </div>
+  </div>
+</form>
+
