@@ -1,11 +1,11 @@
-current directory: /Users/vviilloovv/Git/sinatra-memo/vendor/bundle/ruby/2.6.0/gems/jaro_winkler-1.5.3/ext/jaro_winkler
-/Users/vviilloovv/.rbenv/versions/2.6.3/bin/ruby -I /Users/vviilloovv/.rbenv/versions/2.6.3/lib/ruby/2.6.0 -r ./siteconf20190716-60637-1pr9xrk.rb extconf.rb
+current directory: /Users/nttk/Git/sinatra-memo/vendor/bundle/ruby/2.6.0/gems/jaro_winkler-1.5.3/ext/jaro_winkler
+/Users/nttk/.rbenv/versions/2.6.3/bin/ruby -I /Users/nttk/.rbenv/versions/2.6.3/lib/ruby/2.6.0 -r ./siteconf20190717-79428-y9c9at.rb extconf.rb
 creating Makefile
 
-current directory: /Users/vviilloovv/Git/sinatra-memo/vendor/bundle/ruby/2.6.0/gems/jaro_winkler-1.5.3/ext/jaro_winkler
+current directory: /Users/nttk/Git/sinatra-memo/vendor/bundle/ruby/2.6.0/gems/jaro_winkler-1.5.3/ext/jaro_winkler
 make "DESTDIR=" clean
 
-current directory: /Users/vviilloovv/Git/sinatra-memo/vendor/bundle/ruby/2.6.0/gems/jaro_winkler-1.5.3/ext/jaro_winkler
+current directory: /Users/nttk/Git/sinatra-memo/vendor/bundle/ruby/2.6.0/gems/jaro_winkler-1.5.3/ext/jaro_winkler
 make "DESTDIR="
 compiling adj_matrix.c
 compiling codepoints.c
@@ -13,6 +13,6 @@ compiling jaro.c
 compiling jaro_winkler.c
 linking shared-object jaro_winkler/jaro_winkler_ext.bundle
 
-current directory: /Users/vviilloovv/Git/sinatra-memo/vendor/bundle/ruby/2.6.0/gems/jaro_winkler-1.5.3/ext/jaro_winkler
+current directory: /Users/nttk/Git/sinatra-memo/vendor/bundle/ruby/2.6.0/gems/jaro_winkler-1.5.3/ext/jaro_winkler
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 jaro_winkler_ext.bundle ./.gem.20190716-60637-mz24h1/jaro_winkler
+/usr/bin/install -c -m 0755 jaro_winkler_ext.bundle ./.gem.20190717-79428-1794w7b/jaro_winkler

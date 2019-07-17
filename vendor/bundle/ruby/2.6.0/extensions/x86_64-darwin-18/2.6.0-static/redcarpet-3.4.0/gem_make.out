@@ -1,5 +1,5 @@
 current directory: /Users/nttk/Git/sinatra-memo/vendor/bundle/ruby/2.6.0/gems/redcarpet-3.4.0/ext/redcarpet
-/Users/nttk/.rbenv/versions/2.6.3/bin/ruby -I /Users/nttk/.rbenv/versions/2.6.3/lib/ruby/2.6.0 -r ./siteconf20190710-70800-1xd8n0t.rb extconf.rb
+/Users/nttk/.rbenv/versions/2.6.3/bin/ruby -I /Users/nttk/.rbenv/versions/2.6.3/lib/ruby/2.6.0 -r ./siteconf20190717-79428-6cug7a.rb extconf.rb
 creating Makefile
 
 current directory: /Users/nttk/Git/sinatra-memo/vendor/bundle/ruby/2.6.0/gems/redcarpet-3.4.0/ext/redcarpet
@@ -35,4 +35,4 @@ linking shared-object redcarpet.bundle
 
 current directory: /Users/nttk/Git/sinatra-memo/vendor/bundle/ruby/2.6.0/gems/redcarpet-3.4.0/ext/redcarpet
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 redcarpet.bundle ./.gem.20190710-70800-e92rit
+/usr/bin/install -c -m 0755 redcarpet.bundle ./.gem.20190717-79428-1oqw5jg
