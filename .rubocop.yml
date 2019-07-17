@@ -257,6 +257,3 @@ Performance/ReverseEach:
 Performance/UnfreezeString:
   Enabled: true
 
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
