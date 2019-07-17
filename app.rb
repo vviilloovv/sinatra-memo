@@ -66,13 +66,13 @@ post "/new" do
   redirect "/"
 end
 
-get "/show" do
+get "/detail" do
   redirect "/" if params["id"].nil? || params["id"].empty?
 
   @page_title = "Show memo"
   @memo = find_memo(params["id"])
   redirect "/" if @memo.nil?
-  erb :show
+  erb :detail
 end
 
 get "/edit" do
