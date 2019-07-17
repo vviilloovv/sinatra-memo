@@ -7,7 +7,7 @@
 <div class="content">
   <ul>
     <% @memos.each do |memo| %>
-      <li><a href="/show?id=<%= memo["id"] %>"><%= memo["title"] %></a></li>
+      <li><a href="/detail?id=<%= memo["id"] %>"><%= memo["title"] %></a></li>
     <% end %>
   </ul>
 </div>
