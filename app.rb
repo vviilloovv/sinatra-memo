@@ -98,7 +98,7 @@ delete "/edit" do
 end
 
 patch "/edit" do
-  redirect "/edit?id=#{params[:id]}" if params[:memo_body].empty?
+  redirect "/edit/#{params[:id]}" if params[:memo_body].empty?
 
   patch_memo(
     "id" => params[:id],
