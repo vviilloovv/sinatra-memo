@@ -23,6 +23,7 @@ helpers do
   def dump_memos(new_memos)
     open(json_file_path, "r+") do |io|
       io.flock(File::LOCK_EX)
+      io.truncate(0)
       JSON.dump({ "memos" => new_memos }, io)
     end
   end
