@@ -21,7 +21,10 @@ helpers do
   end
 
   def dump_memos(new_memos)
-    open(json_file_path, "w") { |io| JSON.dump({ "memos" => new_memos }, io) }
+    open(json_file_path, "r+") do |io|
+      io.flock(File::LOCK_EX)
+      JSON.dump({ "memos" => new_memos }, io)
+    end
   end
 
   def add_memo(memo)
