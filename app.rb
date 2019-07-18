@@ -3,7 +3,7 @@
 require "sinatra"
 require "sinatra/reloader"
 require "json"
-
+require "securerandom"
 
 helpers do
   def json_file_path
@@ -59,7 +59,7 @@ post "/new" do
   redirect "/new" if params[:memo_body].empty?
 
   add_memo(
-    "id" => Time.now.strftime("%Y%m%d%H%M%S"),
+    "id" => SecureRandom.uuid,
     "title" => params[:memo_title].empty? ? "John Doe's memo" : params[:memo_title],
     "body" => params[:memo_body],)
 
