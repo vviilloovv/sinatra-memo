@@ -54,7 +54,7 @@ get "/" do
   erb :index
 end
 
-get "/new/?" do
+get "/new" do
   @page_title = "New memo"
   erb :new
 end
@@ -70,22 +70,22 @@ post "/new" do
   redirect "/"
 end
 
-get "/detail/?" do
+get "/detail" do
   redirect "/"
 end
 
-get "/detail/:id/?" do |id|
+get "/detail/:id" do |id|
   @page_title = "Show memo"
   @memo = find_memo(id)
   redirect "/" if @memo.nil?
   erb :detail
 end
 
-get "/edit/?" do
+get "/edit" do
   redirect "/"
 end
 
-get "/edit/:id/?" do |id|
+get "/edit/:id" do |id|
   @page_title = "Edit memo"
   @memo = find_memo(id)
   redirect "/" if @memo.nil?
