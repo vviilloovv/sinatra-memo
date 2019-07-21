@@ -70,38 +70,30 @@ post "/new" do
   redirect "/"
 end
 
-get "/detail" do
-  redirect "/"
-end
-
-get "/detail/:id" do |id|
+get "/:id" do |id|
   @page_title = "Show memo"
   @memo = find_memo(id)
   redirect "/" if @memo.nil?
-  erb :detail
+  erb :show
 end
 
-get "/edit" do
-  redirect "/"
-end
-
-get "/edit/:id" do |id|
+get "/:id/edit" do |id|
   @page_title = "Edit memo"
   @memo = find_memo(id)
   redirect "/" if @memo.nil?
   erb :edit
 end
 
-delete "/edit" do
-  delete_memo(params[:id])
+delete "/:id/edit" do |id|
+  delete_memo(id)
   redirect "/"
 end
 
-patch "/edit" do
-  redirect "/edit/#{params[:id]}" if params[:memo_body].empty?
+patch "/:id/edit" do |id|
+  redirect "/#{id}/edit" if params[:memo_body].empty?
 
   patch_memo(
-    "id" => params[:id],
+    "id" => id,
     "title" => params[:memo_title].empty? ? "John Doe's memo" : params[:memo_title],
     "body" => params[:memo_body],)
   redirect "/"

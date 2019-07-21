@@ -11,12 +11,11 @@
 </div>
 <div class="field is-grouped">
   <div class="control">
-    <a class="button is-success is-outlined" href="/edit/<%= id %>">編集</a>
+    <a class="button is-success is-outlined" href="/<%= id %>/edit">編集</a>
   </div>
   <div class="control">
-    <form action="/edit" method="post">
+    <form action="/<%= id %>/edit" method="post">
       <input type="hidden" name="_method" value="delete">
-      <input type="hidden" name="id" value="<%= id %>">
       <button class="button is-danger is-outlined">削除</button>
     </form>
   </div>
